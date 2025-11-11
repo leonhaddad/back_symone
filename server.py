@@ -2,7 +2,9 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import subprocess
 
-app = Flask(__name__)
+from flask import Blueprint
+app = Blueprint('vehicle_proxy', __name__)
+
 CORS(app)  # autorise toutes les origines ; restreins si besoin
 
 MODEL_NAME = "gemma3:270m"  # Modèle léger

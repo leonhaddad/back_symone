@@ -13,7 +13,8 @@ import urllib3
 # Désactiver les avertissements SSL (pour certificats auto-signés)
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-app = Flask(__name__)
+from flask import Blueprint
+app = Blueprint('vehicle_proxy', __name__)
 CORS(app)  # Permettre les requêtes depuis le front
 
 # Configuration
