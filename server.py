@@ -3,7 +3,7 @@ from flask_cors import CORS
 import subprocess
 
 from flask import Blueprint
-app = Blueprint('vehicle_proxy', __name__)
+app = Blueprint('server', __name__)
 
 CORS(app)  # autorise toutes les origines ; restreins si besoin
 
